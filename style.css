@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+body{
+    font-family: 'Fredoka One', cursive;
+    background-color: peachpuff;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+h1{
+    font-size: 60px;
+    color: slateblue;
+    text-align: center;
+}
+h5{
+    font-size: 15px;
+    color: slateblue;
+}
+#game{
+    border-radius: 25px;
+    padding: 50px;
+    width: 85%;
+    height: 50vh;
+    background: slateblue;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+#status{
+    border-radius: 25px;
+    padding: 5px;
+    width: 20%;
+    height: 100%;
+    background: white;
+    text-align: center;
+}
+#pet{
+    border-radius: 25px;
+    padding: 5px;
+    width: 50%;
+    height: 100%;
+    background: whitesmoke;
+    text-align: center;
+}
+#actions{
+    border-radius: 25px;
+    padding: 5px;
+    width: 20%;
+    height: 100%;
+    background: white;
+    text-align: center;
+}
+img{
+    height: 140px;
+}
+button{
+    font-family: 'Fredoka One', cursive;
+    width: 65px;
+    height: 30px;
+    background: slateblue;
+    border-radius: 25px;
+    color: white;
+}
+button:hover{
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25)
+}
