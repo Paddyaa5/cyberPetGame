@@ -22,7 +22,7 @@ h5{
 }
 #game{
     border-radius: 25px;
-    padding: 50px;
+    padding: 50px 25px;
     width: 85%;
     height: 50vh;
     background: slateblue;
@@ -64,6 +64,10 @@ button{
     background: slateblue;
     border-radius: 25px;
     color: white;
+}
+#st{
+    width: 90px;
+    height: 45px;
 }
 button:hover{
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25)

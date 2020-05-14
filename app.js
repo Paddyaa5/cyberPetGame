@@ -46,20 +46,51 @@ const selectionDog = () => {
     document.getElementById('dog').style.display = 'none';
     document.getElementById('cat').style.display = 'none';
     nameSelection();
+    return type = "dog";
 }
 const selectionCat = () => {
     document.getElementById('cyberpet').src = "img/cat4.png";
     document.getElementById('dog').style.display = 'none';
     document.getElementById('cat').style.display = 'none';
     nameSelection();
+    return type = "cat";
 }
 const nameSelection = () => {
     petname = prompt("Please enter pet name", "name");
     if (petname != null) {
         document.getElementById("petName").innerHTML = petname
     }
+    document.getElementById('startGame').innerHTML = '<button id="st" onclick="start()"> Start Game </button>'
 }
 
+const start = () => {
+    return pet1 = new Animal(petname, type)
+}
 
 // Next step is to use Prompt and onClick to create an object. Like below:
 // let Winston = new Animal ("Winston", "Dog")
+
+
+// const gainHunger =()=>{
+//     if (hunger > 0){
+//     hunger -= 5;
+//     setTimeout(gainHunger, 30000);
+//     }
+//     }
+//     gainHunger();
+
+// const gainThrist =()=>{
+//     if (thirst > 0){
+//     thirst -= 5;
+//     setTimeout(gainThrist, 30000);
+//     }
+//     }
+//     gainThrist();
+
+// const gainBoredom =()=>{
+//     if (happiness > 0){
+//     happiness -= 5;
+//     setTimeout(gainBoredom, 30000);
+//     }
+//     }
+//     gainBoredom();
