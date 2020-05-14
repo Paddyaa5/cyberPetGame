@@ -1,9 +1,13 @@
 class Animal{
-    constructor(name){
+    constructor(name, type){
+        this._type = type;
         this._name = name;
         this._hunger = 25;
         this._thirst = 25;
         this._happiness = 25;
+    }
+    get type () {
+        return this._type;
     }
     get name(){
         return this._name;
@@ -33,21 +37,29 @@ class Animal{
         this._happiness+=10;
     } 
 }
+
+let petname = null;
+let type = null;
+
 const selectionDog = () => {
     document.getElementById('cyberpet').src = "img/dog.png";
     document.getElementById('dog').style.display = 'none';
     document.getElementById('cat').style.display = 'none';
-    name();
+    nameSelection();
 }
 const selectionCat = () => {
     document.getElementById('cyberpet').src = "img/cat4.png";
     document.getElementById('dog').style.display = 'none';
     document.getElementById('cat').style.display = 'none';
-    name();
+    nameSelection();
 }
-const name = () => {
-    let petname = prompt("Please enter pet name", "name");
+const nameSelection = () => {
+    petname = prompt("Please enter pet name", "name");
     if (petname != null) {
         document.getElementById("petName").innerHTML = petname
     }
 }
+
+
+// Next step is to use Prompt and onClick to create an object. Like below:
+// let Winston = new Animal ("Winston", "Dog")
