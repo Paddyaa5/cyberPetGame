@@ -54,7 +54,7 @@ h5{
     background: white;
     text-align: center;
 }
-img{
+input, img{
     height: 140px;
 }
 button{

@@ -33,9 +33,21 @@ class Animal{
         this._happiness+=10;
     } 
 }
-
-let Cooper = new Animal ("Cooper")
-
-Cooper.play();
-
-console.log(Cooper)
+const selectionDog = () => {
+    document.getElementById('cyberpet').src = "img/dog.png";
+    document.getElementById('dog').style.display = 'none';
+    document.getElementById('cat').style.display = 'none';
+    name();
+}
+const selectionCat = () => {
+    document.getElementById('cyberpet').src = "img/cat4.png";
+    document.getElementById('dog').style.display = 'none';
+    document.getElementById('cat').style.display = 'none';
+    name();
+}
+const name = () => {
+    let petname = prompt("Please enter pet name", "name");
+    if (petname != null) {
+        document.getElementById("petName").innerHTML = petname
+    }
+}
