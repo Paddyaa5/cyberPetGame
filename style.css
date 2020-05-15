@@ -38,6 +38,14 @@ h5{
     background: white;
     text-align: center;
 }
+#instructions{
+    font-size: 14px;
+    color: slateblue;
+}
+#hungerTotal1, #happyTotal1, #thirstTotal1{
+    font-size: 14px;
+    margin-top: -15px;
+}
 #pet{
     border-radius: 25px;
     padding: 5px;

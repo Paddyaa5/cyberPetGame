@@ -35,8 +35,18 @@ class Animal{
         this._hunger-=10;
         this._thirst-=5;
         this._happiness+=10;
-    } 
+    }
+    decease(){
+        this._hunger-=5;
+        this._thirst-=5;
+        this._happiness-=5;
+    }
 }
+let Cooper = new Animal ("Cooper", "dog");
+
+Cooper.eat();
+
+console.log(Cooper);
 
 let petname = null;
 let type = null;
@@ -64,33 +74,28 @@ const nameSelection = () => {
 }
 
 const start = () => {
-    return pet1 = new Animal(petname, type)
+    pet1 = new Animal(petname, type);
+    document.getElementById("petHealth").innerHTML = "Pet Health";
+    document.getElementById("instructions").innerHTML = "";
+    document.getElementById("happyTotal").innerHTML = "<h5> Happiness </h5>";
+    document.getElementById("happyTotal1").innerHTML = pet1.happiness;
+    document.getElementById("hungerTotal").innerHTML = "<h5> Hunger </h5>";
+    document.getElementById("hungerTotal1").innerHTML = pet1.hunger;
+    document.getElementById("thirstTotal").innerHTML = "<h5> Thirst </h5>";
+    document.getElementById("thirstTotal1").innerHTML = pet1.thirst;
+    document.getElementById('startGame').innerHTML = "";
+    timer();
+}
+const timer = () => {
+    setTimeout( () =>{
+        pet1.decease();
+        document.getElementById("happyTotal1").innerHTML = pet1.happiness;
+        document.getElementById("hungerTotal1").innerHTML = pet1.hunger;
+        document.getElementById("thirstTotal1").innerHTML = pet1.thirst;
+        timer();
+    }, 5000)
 }
 
-// Next step is to use Prompt and onClick to create an object. Like below:
-// let Winston = new Animal ("Winston", "Dog")
-
-
-// const gainHunger =()=>{
-//     if (hunger > 0){
-//     hunger -= 5;
-//     setTimeout(gainHunger, 30000);
-//     }
-//     }
-//     gainHunger();
-
-// const gainThrist =()=>{
-//     if (thirst > 0){
-//     thirst -= 5;
-//     setTimeout(gainThrist, 30000);
-//     }
-//     }
-//     gainThrist();
-
-// const gainBoredom =()=>{
-//     if (happiness > 0){
-//     happiness -= 5;
-//     setTimeout(gainBoredom, 30000);
-//     }
-//     }
-//     gainBoredom();
+const giveFood = () => {
+    
+}
