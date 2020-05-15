@@ -34,7 +34,7 @@ class Animal{
     play(){
         this._hunger-=10;
         this._thirst-=5;
-        this._happiness+=10;
+        this._happiness+=20;
     }
     decease(){
         this._hunger-=5;
@@ -42,11 +42,6 @@ class Animal{
         this._happiness-=5;
     }
 }
-let Cooper = new Animal ("Cooper", "dog");
-
-Cooper.eat();
-
-console.log(Cooper);
 
 let petname = null;
 let type = null;
@@ -93,9 +88,25 @@ const timer = () => {
         document.getElementById("hungerTotal1").innerHTML = pet1.hunger;
         document.getElementById("thirstTotal1").innerHTML = pet1.thirst;
         timer();
-    }, 5000)
+    }, 10000)
 }
 
 const giveFood = () => {
-    
+    pet1.eat();
+    document.getElementById("happyTotal1").innerHTML = pet1.happiness;
+    document.getElementById("hungerTotal1").innerHTML = pet1.hunger;
+    document.getElementById("thirstTotal1").innerHTML = pet1.thirst;
 }
+const giveWater = () => {
+    pet1.drink();
+    document.getElementById("happyTotal1").innerHTML = pet1.happiness;
+    document.getElementById("hungerTotal1").innerHTML = pet1.hunger;
+    document.getElementById("thirstTotal1").innerHTML = pet1.thirst;
+}
+const playTime = () => {
+    pet1.play();
+    document.getElementById("happyTotal1").innerHTML = pet1.happiness;
+    document.getElementById("hungerTotal1").innerHTML = pet1.hunger;
+    document.getElementById("thirstTotal1").innerHTML = pet1.thirst;
+}
+// If the type = dog, add image of a chew toy, which can then display: none after 3seconds
